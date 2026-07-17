@@ -14,15 +14,7 @@ on:
         required: true
         type: choice
         options:
-          - IPQ60XX-WIFI-YES
-          - IPQ60XX-WIFI-NO
-          - IPQ807X-WIFI-YES
-          - IPQ807X-WIFI-NO
           - MEDIATEK-WIFI-YES
-          - MEDIATEK-WIFI-NO
-          - ROCKCHIP
-          - X86
-          - TEST
       SOURCE:
         default: 'VIKINGYFY/immortalwrt'
         required: true
@@ -33,7 +25,7 @@ on:
           - LiBwrt/openwrt-6.x
           - qosmio/openwrt-ipq
       BRANCH:
-        default: 'main'
+        default: 'owrt'
         required: true
         type: string
       PACKAGE:
@@ -64,7 +56,7 @@ jobs:
       #默认WIFI名称
       WRT_SSID: OWRT
       #默认WIFI密码
-      WRT_WORD: 12345678
+      WRT_WORD: password
       #默认地址
       WRT_IP: 192.168.10.1
       #默认密码，仅作提示，修改无用
