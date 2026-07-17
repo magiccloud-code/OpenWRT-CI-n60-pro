@@ -173,17 +173,7 @@ jobs:
           fi
 
           $GITHUB_WORKSPACE/Scripts/Settings.sh
-
-          # Enable kernel BTF for dae/daed eBPF CO-RE
-          ./scripts/config --enable KERNEL_DEBUG_INFO
-          ./scripts/config --enable KERNEL_DEBUG_INFO_BTF
-          make defconfig -j"$(nproc)"
-          echo "Checking OpenWrt BTF configuration..."
-          grep -E '^CONFIG_KERNEL_(DEBUG_INFO|DEBUG_INFO_BTF)=' .config
-          if ! grep -q '^CONFIG_KERNEL_DEBUG_INFO_BTF=y$' .config; then
-            echo "::error::CONFIG_KERNEL_DEBUG_INFO_BTF was removed by make defconfig"
-            exit 1
-          fi
+   
           make defconfig -j$(nproc) && make clean -j$(nproc)
 
       - name: Download Packages
