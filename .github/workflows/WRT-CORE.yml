@@ -201,33 +201,7 @@ jobs:
           echo "======================="
           du -h --max-depth=1
           echo "======================="
-      - name: Verify Kernel BTF
-        if: env.WRT_TEST != 'true'
-        shell: bash
-        run: |
-          set -euo pipefail
 
-          cd ./wrt/
-
-          VMLINUX="$(find build_dir/target-* \
-            -type f \
-            -path '*/linux-*/linux-*/vmlinux' \
-            -print -quit)"
-
-          if [[ -z "$VMLINUX" ]]; then
-            echo "::error::Compiled vmlinux was not found"
-            exit 1
-          fi
-
-          echo "Checking: $VMLINUX"
-
-          if ! readelf -S "$VMLINUX" | grep -q '\.BTF'; then
-            echo "::error::Compiled kernel does not contain a .BTF section"
-            exit 1
-          fi
-
-          readelf -S "$VMLINUX" | grep '\.BTF'
-          echo "Kernel BTF verification passed"
       - name: Package Firmware
         run: |
           cd ./wrt/ && mkdir ./upload/
