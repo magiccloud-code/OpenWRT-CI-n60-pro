@@ -62,7 +62,7 @@ UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev" "pkg"
 UPDATE_PACKAGE "passwall" "Openwrt-Passwall/openwrt-passwall" "main" "pkg"
 UPDATE_PACKAGE "passwall2" "Openwrt-Passwall/openwrt-passwall2" "main" "pkg"
 # daede 后端及 LuCI 插件
-UPDATE_PACKAGE "daede" "kenzok8/openwrt-daede" "main" "" "daede luci-app-daede"
+UPDATE_PACKAGE "daede" "kenzok8/openwrt-daede" "main"
 
 UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
 
