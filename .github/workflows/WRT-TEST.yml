@@ -15,6 +15,7 @@ on:
         type: choice
         options:
           - MEDIATEK-WIFI-YES
+          - MEDIATEK-WIFI-NO
       SOURCE:
         default: 'VIKINGYFY/immortalwrt'
         required: true
