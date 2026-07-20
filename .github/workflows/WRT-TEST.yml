@@ -28,7 +28,10 @@ on:
       BRANCH:
         default: 'owrt'
         required: true
-        type: string
+        type: choice
+        options:
+          - owrt
+          - openwrt-25.12
       PACKAGE:
         required: false
         type: string
@@ -36,7 +39,10 @@ on:
         description: '仅输出配置文件，不编译固件。'
         default: 'true'
         required: true
-        type: boolean
+        type: choice
+        options:
+          - false
+          - true
 
 #CI权限
 permissions: write-all
