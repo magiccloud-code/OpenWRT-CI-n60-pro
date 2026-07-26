@@ -46,7 +46,7 @@ https://drive.wrt.moe/uboot/mediatek
 
 固件信息里的时间为编译开始的时间，方便核对上游源码提交时间。
 
-MEDIATEK系列、QUALCOMMAX系列、ROCKCHIP系列、X86系列。
+自用MEDIATEK  netcore 60-pro
 
 # 目录简要说明
 
