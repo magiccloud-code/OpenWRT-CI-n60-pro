@@ -1,6 +1,6 @@
 #科学插件调整
 CONFIG_PACKAGE_luci-app-homeproxy=y
-# daede
+#daede
 CONFIG_PACKAGE_luci-app-daede=y
 CONFIG_DEBUG_INFO_BTF=y
 CONFIG_PACKAGE_ca-bundle=y
@@ -22,7 +22,10 @@ CONFIG_PACKAGE_luci-app-partexp=n
 CONFIG_PACKAGE_luci-app-samba4=n
 CONFIG_PACKAGE_luci-app-upnp=y
 CONFIG_PACKAGE_luci-app-wolultra=n
+#测速
 CONFIG_PACKAGE_luci-app-netspeedtest=y
+CONFIG_PACKAGE_python3-email=y
+CONFIG_PACKAGE_python3-pkg-resources=y
 #删除插件
 CONFIG_PACKAGE_luci-app-attendedsysupgrade=n
 CONFIG_PACKAGE_luci-app-wol=n
