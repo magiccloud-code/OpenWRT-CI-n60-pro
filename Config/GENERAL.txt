@@ -1,5 +1,5 @@
 #科学插件调整
-CONFIG_PACKAGE_luci-app-homeproxy=y
+CONFIG_PACKAGE_luci-app-homeproxy=n
 #daede
 CONFIG_PACKAGE_luci-app-daede=y
 CONFIG_DEBUG_INFO_BTF=y
