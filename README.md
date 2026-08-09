@@ -10,39 +10,25 @@
 
 # OpenWRT-CI
 
-官方版：
+官方源：
 
 https://github.com/immortalwrt/immortalwrt.git
 
-自用版：
+VIKINGYFY源：
 
 https://github.com/VIKINGYFY/immortalwrt.git
 
 # U-BOOT
 
-高通版-沉心：
-
-https://github.com/chenxin527/uboot-qsdk12.5-build.git
-
-高通版-小猪：
-
-https://github.com/1980490718/u-boot-2016.git
-
-联发科-全新版：
-
-https://github.com/VIKINGYFY/UBOOT-CI/releases
-
-联发科-官方版：
-
-https://drive.wrt.moe/uboot/mediatek
-
+支持itb升级
+https://github.com/magiccloud-code/bl-mt798x-dhcpd/releases
 # 固件简要说明
 
-固件每天早上5点自动编译。
+固件周一早上5点自动编译。
 
 固件信息里的时间为编译开始的时间，方便核对上游源码提交时间。
 
-自用MEDIATEK  netcore 60-pro
+自用MEDIATEK  netcore n60-pro
 
 # 目录简要说明
 
