@@ -44,10 +44,6 @@ https://drive.wrt.moe/uboot/mediatek
 
 自用MEDIATEK  netcore 60-pro
 
-MEDIATEK  netcore 60-pro使用的uboot在下方发布页自行查找下载(支持固件内保留配置升级,原版uboot不支持)
-
-https://github.com/magiccloud-code/bl-mt798x-dhcpd/releases
-
 # 目录简要说明
 
 workflows——自定义CI配置
