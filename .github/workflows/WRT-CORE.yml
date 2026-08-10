@@ -85,6 +85,20 @@ jobs:
           sudo mkdir -p /mnt/build_wrt
           sudo chown $USER:$USER /mnt/build_wrt
           sudo ln -s /mnt/build_wrt $GITHUB_WORKSPACE/wrt
+          
+      - name: Install build dependencies
+        run: |
+          sudo apt-get install -y \
+            git curl jq patch tar gzip zstd binutils \
+            clang llvm libbpf-dev libclang-dev pkg-config cmake
+
+      - name: Install Rust toolchain
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+          source $HOME/.cargo/env
+          rustup toolchain install nightly-2026-07-20 --profile minimal --component rust-src
+          rustup default nightly-2026-07-20
+          cargo install bpf-linker --version 0.10.4
 
       - name: Initialization Values
         run: |
@@ -107,7 +121,10 @@ jobs:
           if [ -f "$PROJECT_MIRRORS_FILE" ]; then
             sed -i '/.cn\//d; /tencent/d; /aliyun/d' "$PROJECT_MIRRORS_FILE"
           fi
-
+          
+      - name: Install Rust components
+        run: rustup component add rust-src --toolchain nightly-2026-07-20-x86_64-unknown-linux-gnu
+        
       - name: Check Scripts
         run: |
           find ./ -maxdepth 3 -type f -iregex ".*\(txt\|sh\)$" -exec dos2unix {} \; -exec chmod +x {} \;
