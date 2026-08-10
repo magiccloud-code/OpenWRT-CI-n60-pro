@@ -99,7 +99,7 @@ jobs:
           rustup toolchain install nightly-2026-07-20 --profile minimal --component rust-src
           rustup default nightly-2026-07-20
           cargo install bpf-linker --version 0.10.4
-
+        
       - name: Initialization Values
         run: |
           echo "WRT_DATE=$(TZ=UTC-8 date +"%y.%m.%d-%H.%M.%S")" >> $GITHUB_ENV
@@ -121,9 +121,7 @@ jobs:
           if [ -f "$PROJECT_MIRRORS_FILE" ]; then
             sed -i '/.cn\//d; /tencent/d; /aliyun/d' "$PROJECT_MIRRORS_FILE"
           fi
-          
-      - name: Install Rust components
-        run: rustup component add rust-src --toolchain nightly-2026-07-20-x86_64-unknown-linux-gnu
+
         
       - name: Check Scripts
         run: |
@@ -205,7 +203,7 @@ jobs:
         run: |
           cd ./wrt/
 
-          make -j$(nproc) || make -j1 V=s
+          make -j$(nproc) || make -j1 V=1
 
       - name: Machine Information
         run: |
