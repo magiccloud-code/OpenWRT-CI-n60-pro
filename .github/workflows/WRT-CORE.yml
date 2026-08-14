@@ -173,7 +173,7 @@ jobs:
           fi
 
           $GITHUB_WORKSPACE/Scripts/Settings.sh
-   
+
           make defconfig -j$(nproc) && make clean -j$(nproc)
 
       - name: Download Packages
@@ -232,7 +232,8 @@ jobs:
           tag_name: ${{env.WRT_CONFIG}}-${{env.WRT_INFO}}-${{env.WRT_BRANCH}}-${{env.WRT_DATE}}
           files: ./wrt/upload/*.*
           body: |
-            这是个n60pro固件包！
+            这是个平台固件包，内含多个设备！
+            请注意选择你需要的设备固件！
             不要问，刷就完事了！
 
             全系带开源硬件加速，别问了！

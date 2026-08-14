@@ -58,23 +58,18 @@ UPDATE_PACKAGE "theme-fluent" "LazuliKao/luci-theme-fluent" "main"
 UPDATE_PACKAGE "footstrap" "VizzleTF/luci-theme-footstrap" "main"
 UPDATE_PACKAGE "proton2025" "ChesterGoodiny/luci-theme-proton2025" "main"
 
-#UPDATE_PACKAGE "momo" "nikkinikki-org/OpenWrt-momo" "main"
-#UPDATE_PACKAGE "nikki" "nikkinikki-org/OpenWrt-nikki" "main"
-#UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev" "pkg"
-#UPDATE_PACKAGE "passwall" "Openwrt-Passwall/openwrt-passwall" "main" "pkg"
-#UPDATE_PACKAGE "passwall2" "Openwrt-Passwall/openwrt-passwall2" "main" "pkg"
-
-# daede 后端及 LuCI 插件
-UPDATE_PACKAGE "daede" "kenzok8/openwrt-daede" "main" "pkg"
-# honk
-#UPDATE_PACKAGE "honk" "breeze303/openwrt-honk" "main" "pkg"
+UPDATE_PACKAGE "momo" "nikkinikki-org/OpenWrt-momo" "main"
+UPDATE_PACKAGE "nikki" "nikkinikki-org/OpenWrt-nikki" "main"
+UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev" "pkg"
+UPDATE_PACKAGE "passwall" "Openwrt-Passwall/openwrt-passwall" "main" "pkg"
+UPDATE_PACKAGE "passwall2" "Openwrt-Passwall/openwrt-passwall2" "main" "pkg"
 
 #UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
 
 #UPDATE_PACKAGE "athena-led" "unraveloop/JDC-AX6600-Athena-LED-Controller" "main"
 #UPDATE_PACKAGE "ddns-go" "sirpdboy/luci-app-ddns-go" "main"
-UPDATE_PACKAGE "diskman" "sbwml/luci-app-diskman" "main"
-UPDATE_PACKAGE "diskmanager" "4IceG/luci-app-mini-diskmanager" "main"
+#UPDATE_PACKAGE "diskman" "sbwml/luci-app-diskman" "main"
+#UPDATE_PACKAGE "diskmanager" "4IceG/luci-app-mini-diskmanager" "main"
 #UPDATE_PACKAGE "easytier" "EasyTier/luci-app-easytier" "main"
 #UPDATE_PACKAGE "mosdns" "sbwml/luci-app-mosdns" "v5" "" "v2dat"
 #UPDATE_PACKAGE "netspeedtest" "sirpdboy/netspeedtest" "main" "" "homebox ookla-speedtest"
